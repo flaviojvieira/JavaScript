@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros Passos com DOM</title>
+    <style>
+        body {
+            background-color: rgb(120, 199, 202);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <P class="p1">Aqui vai o resultado</P>
+    <p>Aprendendo usar o <strong>DOM</strong> em JavScript</p>
+    <div>Clique em mim</div>
+    
+
+    <script>
+       var teste = window.document.getElementsByTagName('h1')[0]
+      // window.document.write(teste.innerText)
+
+     /*  var p = window.document.getElementById('p1') 
+       document.write(p1.innerText)
+       p.style.background = 'black'
+       p.style.textAlign = 'center'
+       p.style.boxShadow = '2px 2px 5px white'       
+       // p.innerText = 'aguardando...'
+       window.document.getElementById('p1').innerText = 'aguardando...'
+       window.document.getElementById('p1').style.color = 'green' 
+
+       var p = window.document.getElementsByName('p1')[0]
+       p.innerText = 'Olá' 
+
+       var p = document.getElementsByClassName('p1')[0]
+       p.innerText = 'Mudando...' */
+
+       var p = window.document.querySelector('p.p1')
+       p.style.color = 'blue'
+       p.innerText = 'Mudando...'
+       p.style.background = 'green'
+       p.style.textAlign = 'center'
+    
+
+    </script>
+
+</body>
+</html>
