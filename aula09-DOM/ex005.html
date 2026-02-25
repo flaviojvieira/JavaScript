@@ -22,17 +22,16 @@
     
 
     <script> 
-    // acessando por 'marca' getElementByTagName
-       var corpo = window.document.body
-       var p = window.document.getElementsByTagName('p')[0]
-       corpo.style.background = 'blue'
+        var corpo = window.document.body
+        corpo.style.background = 'blue'
+
+    // acessando por 'marca' getElementByTagName       
+       var p = window.document.getElementsByTagName('p')[0]       
        window.document.write("<br> <strong>repetindo o primeiro 'p' com JS por 'marca' : </strong>" + p.innerHTML + "<br><br>")   
        p.style.background = 'black'
        p.style.padding = '20px'
        p.style.textAlign = 'center'
-       p.style.color = 'red'
-    // window.alert("<strong>repetindo o primeiro 'p' com JS: </strong>" + p.innerHTML) 
-       
+       p.style.color = 'red'       
        
     // acessando por 'id' getElementByID
        var id = window.document.getElementById('id') 
@@ -54,7 +53,6 @@
        nome.style.textAlign = 'center'
        nome.style.color = 'gray'
 
-
     // acessando por 'class name' getElementByClassName
        var classe = document.getElementsByClassName('classe')[0]
        classe.innerText = 'Mudando o texto com JS...' 
@@ -70,10 +68,6 @@
        qs.style.background = 'black'
        qs.style.textAlign = 'center' 
        qs.style.padding = '20px'
-      
-    
-
     </script>
-
 </body>
 </html>
