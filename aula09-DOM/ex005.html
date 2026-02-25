@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros Passos com DOM</title>
+    <style>
+        body {
+            background-color: rgb(120, 199, 202);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <P>Aqui vai o resultado</P>
+    <p id="id">Aprendendo usar o <strong>DOM</strong> em JavaScript</p>
+    <div name = "nome">Clique em mim</div> <br>
+    <div class="classe">Outra possibilidade</div>
+    <h3 id="qs">Mais um teste para  querySelector</h3>
+    
+
+    <script> 
+    // acessando por 'marca' getElementByTagName
+       var corpo = window.document.body
+       var p = window.document.getElementsByTagName('p')[0]
+       corpo.style.background = 'blue'
+       window.document.write("<br> <strong>repetindo o primeiro 'p' com JS por 'marca' : </strong>" + p.innerHTML + "<br><br>")   
+       p.style.background = 'black'
+       p.style.padding = '20px'
+       p.style.textAlign = 'center'
+       p.style.color = 'red'
+    // window.alert("<strong>repetindo o primeiro 'p' com JS: </strong>" + p.innerHTML) 
+       
+       
+    // acessando por 'id' getElementByID
+       var id = window.document.getElementById('id') 
+       document.write("<strong>repetindo o segundo 'p' com JS por 'ID' : </strong>" + id.innerHTML + "<br><br>")
+       id.innerHTML = 'Mudando valores com JS'
+       id.style.background = 'black'
+       id.style.textAlign = 'center'
+       id.style.boxShadow = '2px 2px 5px white'       
+       id.style.padding = '20px'
+       id.style.color = 'yellow'
+       window.document.getElementById('id').innerText = 'aguardando...'
+       window.document.getElementById('id').style.color = 'green' 
+
+    // acessando por 'name' getElementByName
+       var nome = window.document.getElementsByName('nome')[0]
+       document.write("<strong>repetindo a 'div' com JS por 'name' : </strong>" + nome.innerHTML + "<br><br>")
+       nome.style.background = 'black'
+       nome.style.padding = '20px'
+       nome.style.textAlign = 'center'
+       nome.style.color = 'gray'
+
+
+    // acessando por 'class name' getElementByClassName
+       var classe = document.getElementsByClassName('classe')[0]
+       classe.innerText = 'Mudando o texto com JS...' 
+       window.document.write("<strong>Repetindo a segunda 'div' com JS por 'class name' : </strong>" + classe.innerHTML + "<br><br>")
+       classe.style.background = 'black'
+       classe.style.padding = '20px'
+       classe.style.textAlign = 'center'
+
+       // acessando por 'querySelector' método mais recente
+       var p = window.document.querySelector('qs')
+       window.document.write("<strong>Repetindo 'h3' com JS por 'querySelector' : </strong>" + qs.innerHTML + "<br><br>")
+       qs.style.color = 'green'       
+       qs.style.background = 'black'
+       qs.style.textAlign = 'center' 
+       qs.style.padding = '20px'
+      
+    
+
+    </script>
+
+</body>
+</html>
