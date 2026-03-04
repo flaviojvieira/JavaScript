@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições Aninhadas</title>
+</head>
+<body>
+    <h1>Você é Maior de Idade?</h1>
+    <input type="number" name="txti" id="txti">
+    <input type="button" value="consultar" onclick="consultar()">
+    <div id="res"></div>
+
+    <h1>Posso Votar?</h1>
+    <input type="number" name="txtv" id="txtv">
+    <input type="button" value="verificar" onclick="verificar()">
+    <div id="res2"></div>
+
+    <script>
+        function consultar() {
+            var id = document.getElementById('txti')
+            var res = document.getElementById('res')
+            var idade = Number(id.value)
+            res.innerHTML = `<br><strong>Você tem ${idade} anos</strong><br>`
+
+            if (idade >= 18) {
+                res.innerHTML += '<strong>Você é maior de idade<br></strong>'
+            } else {
+                if (idade < 18 && idade >= 15) {
+                    res.innerHTML += '<strong>Você é pré-adolescente</strong><br>'
+                } else {
+                    res.innerHTML += '<strong>Você ainda é uma criança</strong>'
+                }
+            }
+        }
+
+        function verificar() {
+            var vt = document.getElementById('txtv')
+            var res2 = document.getElementById('res2')
+            var votar = Number(vt.value)
+            res2.innerHTML = `<strong><br>Voce tem ${votar} anos<br></strong>`
+
+            if (votar >= 18 && votar < 66) {
+                res2.innerHTML += '<strong>Seu voto é OBRIGATÓRIO!<br></strong>'
+            } else if (votar >= 16){
+                res2.innerHTML += '<strong>Pela sua idade, seu voto é OPCIONAL!</strong>'                
+            } else {
+                res2.innerHTML += '<strong>Pela sua idade, você NÃO pode votar!</strong>'
+            }
+        }
+    </script>
+</body>
+</html>

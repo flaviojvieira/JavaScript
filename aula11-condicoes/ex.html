@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de País</title>
+</head>
+<body>
+    <h1>Qual seu país?</h1>
+    <input type="text" name="txtp" id="txtp">
+    <input type="button" value="consultar" onclick="consultar()">
+    <div id="res"></div>
+
+    <script>
+        function consultar() {
+            var país = document.getElementById('txtp').value
+            var res = document.getElementById('res')
+            res.innerHTML = '<strong><br> Você nasceu no ' + país + '<br></strong>'
+            if (país == 'Brasil') {
+                res.innerHTML += '<strong>Você é Brasileiro!</strong>'
+            } else {
+                res.innerHTML += '<strong>Você é estrangeiro!</strong>'
+            }                                       
+        }
+    </script>
+</body>
+</html>
