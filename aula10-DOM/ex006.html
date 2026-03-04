@@ -24,23 +24,21 @@
     </div>
 
     <script>
-        var a =  document.getElementById('area')   
-        a.addEventListener('click', clicar)
-        a.addEventListener('mouseenter', entrar)
+        var a = document.getElementById('area')
+        a.addEventListener('mouseenter', entrou)
         a.addEventListener('mouseout', sair)
+        a.addEventListener('click', clicar)
 
-        function clicar() {           
-           a.innerText = 'clicou'
-           a.style.background = 'black'
-        }
-
-        function entrar() {
-            a.innerText = 'Entrou'
+        function entrou() {
+            a.innerText = 'Mouse entrou'
         }
 
         function sair() {
-            a.innerText = 'Saiu'
-            a.style.background = 'green'
+            a.innerText = 'Mouse saiu'
+        }
+
+        function clicar() {
+            a.innerText = 'Clicou'
         }
     </script>
 
