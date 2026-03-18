@@ -4,7 +4,7 @@ function carregar() {
     var data = new Date()
     var hora = data.getHours()
    
-    msg.innerHTML = `Agora são ${hora} horas <br>`    
+    msg.innerHTML = `Agora são, aproximadamente, ${hora} horas! <br>`    
 
     if (hora >= 0 && hora < 12) {
         msg.innerHTML += 'Bom dia!'
