@@ -16,13 +16,17 @@ header {
     padding: 20px;     
 }
 
-#corpo {
+section {
     background-color: white;
     width: 500px;    
     margin: auto;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 10px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);   
+}
+
+select {
+    width: 150px;
 }
 
 footer {
