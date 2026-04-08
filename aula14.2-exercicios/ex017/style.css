@@ -14,10 +14,9 @@ header {
     padding: 20px;     
 }
 
-#corpo {
+section {
     background-color: white;
-    width: 500px;  
-    height: 200px;  
+    width: 500px;        
     margin: auto;
     border-radius: 20px;
     padding: 10px;
